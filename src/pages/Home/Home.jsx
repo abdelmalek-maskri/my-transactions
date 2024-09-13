@@ -4,16 +4,21 @@ import TransactionForm from './TransactionForm'
 import {useAuthContext} from '../../hooks/useAuthContext'
 import { useCollection } from '../../hooks/useCollection'
 import TransactionList from './TransactionList'
+import { timestamp } from '../../firebase/config'
 
 
 export default function Home() {
   const {user} = useAuthContext();
-  const {document, error} = useCollection('transactions')
+  const {document, error} = useCollection(
+    'transactions',
+    ["uid", "==", user.uid],
+    ["createdAt", "desc"]
+  )
   return (
     <div className='container'>
       <div className='content'>
         {error && <p>{error}</p>}
-        {document && <TransactionList transactions={document}/>}
+        {document && <TransactionList transactions={document} />}
       </div>
 
       <div className='sidebar'>
