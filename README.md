@@ -11,16 +11,16 @@
 - **Firestore Integration**: Firestore is used for storing and retrieving transaction data, with real-time updates.
 
 ## Usage
-**Sign Up or Log In**: Create an account or log in with your credentials.
--**Add Transactions**: Fill in the transaction name and amount in the form and click "Add Transaction."
--**View Transactions**: Transactions are listed in real-time as you add them, showing the name and amount.
--**Delete Transactions**: Click the 'x' button next to a transaction to remove it.
+- **Sign Up or Log In**: Create an account or log in with your credentials.
+- **Add Transactions**: Fill in the transaction name and amount in the form and click "Add Transaction."
+- **View Transactions**: Transactions are listed in real-time as you add them, showing the name and amount.
+- **Delete Transactions**: Click the 'x' button next to a transaction to remove it.
 
 ## Custom Hooks
--**useCollection**: Fetches real-time data from the Firestore database.
--**useFirestore**: Handles Firestore CRUD operations (Create, Read, Update, Delete).
+- **useCollection**: Fetches real-time data from the Firestore database.
+- **useFirestore**: Handles Firestore CRUD operations (Create, Read, Update, Delete).
 
 ## Components
--**Home**: Main component that displays the transaction list and the form to add new transactions.
--**TransactionForm**: Form component to add new transactions.
--**TransactionList**: Displays a list of transactions with the ability to delete any entry.
+- **Home**: Main component that displays the transaction list and the form to add new transactions.
+- **TransactionForm**: Form component to add new transactions.
+- **TransactionList**: Displays a list of transactions with the ability to delete any entry.
