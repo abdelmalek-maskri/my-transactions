@@ -1,8 +1,26 @@
-# React + Vite
+# My-Transactions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**My Transactions** is a simple transaction tracking app built with React and Firestore. The app allows users to sign up, log in, add, and manage their financial transactions. Users' data is securely stored in Firestore, and the app includes real-time updates with Firestore's cloud database.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Sign up and log in using Firebase Authentication.
+- **Add Transactions**: Users can add transaction names and amounts.
+- **View Transactions**: See all transactions in real-time, listed in descending order by date.
+- **Delete Transactions**: Remove any transaction from the list.
+- **Firestore Integration**: Firestore is used for storing and retrieving transaction data, with real-time updates.
+
+## Usage
+- **Sign Up or Log In**: Create an account or log in with your credentials.
+-**Add Transactions**: Fill in the transaction name and amount in the form and click "Add Transaction."
+-**View Transactions**: Transactions are listed in real-time as you add them, showing the name and amount.
+-**Delete Transactions**: Click the 'x' button next to a transaction to remove it.
+
+## Custom Hooks
+-**useCollection**: Fetches real-time data from the Firestore database.
+-**useFirestore**: Handles Firestore CRUD operations (Create, Read, Update, Delete).
+
+## Components
+-**Home**: Main component that displays the transaction list and the form to add new transactions.
+-**TransactionForm**: Form component to add new transactions.
+-**TransactionList**: Displays a list of transactions with the ability to delete any entry.
