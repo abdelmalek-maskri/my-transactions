@@ -31,42 +31,33 @@ export const useFirestore = (collection) => {
     const ref = projectFireStore.collection(collection);
 
     //only dispatch if the comonent didn't mount or cancelled
-    const dispatchIfNotCancelled = (action) => {
-        if(!isCancelled){
-            dispatch(action);
-        }
-    }
 
     //add document
     const addDocument = async (doc) => {
-        dispatchIfNotCancelled({type: 'IS_PENDING'})
+        dispatch({type: 'IS_PENDING'})
         try{
             const createdAt = timestamp.fromDate(new Date())
             const addedDocument = await ref.add({...doc, createdAt});
 
-        dispatchIfNotCancelled({type: 'ADDED_DOCUMENT', payload: addedDocument});
+        dispatch({type: 'ADDED_DOCUMENT', payload: addedDocument});
         }catch(err){
-            dispatchIfNotCancelled({type: 'ERROR', payload: err.message})
+            dispatch({type: 'ERROR', payload: err.message})
         }
         
     }
 
     //delete a document
     const deleteDocument = async (id) =>{
-        dispatchIfNotCancelled({type: 'IS_PENDING'})
+        dispatch({type: 'IS_PENDING'})
 
         try{
             await ref.doc(id).delete()
-            dispatchIfNotCancelled({type: 'DELETED DOCUMENT'})
+            dispatch({type: 'DELETED DOCUMENT'})
 
         }catch(error){
-            dispatchIfNotCancelled({type: 'ERROR', payload: 'COuld not delete'})
+            dispatch({type: 'ERROR', payload: 'Could not delete'})
         }
     }
-
-    useEffect(() => {
-        return () => setIsCancelled(true);
-    }, [])
     
 
     return {response, addDocument, deleteDocument}
