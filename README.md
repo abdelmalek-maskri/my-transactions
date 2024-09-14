@@ -11,7 +11,7 @@
 - **Firestore Integration**: Firestore is used for storing and retrieving transaction data, with real-time updates.
 
 ## Usage
-- **Sign Up or Log In**: Create an account or log in with your credentials.
+**Sign Up or Log In**: Create an account or log in with your credentials.
 -**Add Transactions**: Fill in the transaction name and amount in the form and click "Add Transaction."
 -**View Transactions**: Transactions are listed in real-time as you add them, showing the name and amount.
 -**Delete Transactions**: Click the 'x' button next to a transaction to remove it.
