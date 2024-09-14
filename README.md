@@ -3,7 +3,7 @@
 **My Transactions** is a simple transaction tracking app built with React and Firestore. The app allows users to sign up, log in, add, and manage their financial transactions. Users' data is securely stored in Firestore, and the app includes real-time updates with Firestore's cloud database.
 
 # Live Demo
-Check out the live app here: [My Daily Transactions](https://my-daily-transactions.netlify.app/login)
+Check out the live app here: [My Daily Transactions]([https://my-daily-transactions.netlify.app/login](https://my-daily-transactions.netlify.app/login))
 
 
 ## Features
