@@ -2,6 +2,8 @@
 
 **My Transactions** is a simple transaction tracking app built with React and Firestore. The app allows users to sign up, log in, add, and manage their financial transactions. Users' data is securely stored in Firestore, and the app includes real-time updates with Firestore's cloud database.
 
+You can view the project here 
+
 ## Features
 
 - **User Authentication**: Sign up and log in using Firebase Authentication.
