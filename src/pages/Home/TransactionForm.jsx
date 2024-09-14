@@ -24,11 +24,11 @@ export default function TransactionForm({ uid }) {
         <form onSubmit={handleSubmit}>
             <label>
                 <span>Transaction name:</span>
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} required/>
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} required placeholder='Transaction...'/>
             </label>
             <label>
                 <span>Amount:</span>
-                <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} required/>
+                <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} required placeholder='🥖💸'/>
             </label>
             <button>Add Transaction</button>
         </form>
