@@ -25,17 +25,13 @@
 }
 
 .error {
-    color: #ff4d4f;
-    background-color: #ffe6e6;
+    color: red;
+    background-color: #fdd;
+    border: 1px solid red;
     padding: 10px;
-    border: 1px solid #ff4d4f;
+    margin-top: 10px;
     border-radius: 5px;
-    font-weight: bold;
-    margin-top: 15px;
+    font-size: 14px;
     text-align: center;
   }
   
-  .error::before {
-    content: "⚠️ ";
-    font-size: 1.2em;
-  }

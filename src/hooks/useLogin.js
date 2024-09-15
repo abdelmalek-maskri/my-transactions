@@ -29,7 +29,7 @@ export const useLogin = () => {
 
         }catch(err){
             console.log(err.message);
-            setError(err.message);
+            setError('Wrong email or password :(');
             setIsPending(false);
         
         }

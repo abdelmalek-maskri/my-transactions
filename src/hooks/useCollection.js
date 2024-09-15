@@ -2,14 +2,17 @@ import { useEffect, useRef, useState } from "react"
 import { projectFireStore, timestamp } from "../firebase/config"
 
 
+
 export const useCollection = (collection, _query, _orderBy) => {
     const [document, setDocument] = useState(null);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const query = useRef(_query).current
     const orderBy = useRef(_orderBy).current
 
     useEffect(() => {
+        setLoading(true);
         let ref = projectFireStore.collection(collection);
 
         if(query){
@@ -27,9 +30,11 @@ export const useCollection = (collection, _query, _orderBy) => {
             })
 
             //update state
+            setLoading(false);
             setDocument(result);
             setError(null);
         },(error) => {
+            setLoading(false);
             console.log(error);
             setError("Could not fetch data :(")
         })
@@ -39,5 +44,5 @@ export const useCollection = (collection, _query, _orderBy) => {
     
     }, [collection, orderBy])
 
-    return {document, error}
+    return {document, error, loading}
 }
